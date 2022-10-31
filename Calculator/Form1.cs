@@ -19,10 +19,13 @@ namespace WindowsFormsApp1
 
         private void btCong_Click(object sender, EventArgs e)
         {
-            double a = double.Parse(txtSoA.Text);
-            double b = double.Parse(txtSoB.Text);
-            double c = a + b;
-            txtKQ.Text = c.ToString();
+            if (txtSoA.Text != String.Empty)
+            {
+                double a = double.Parse(txtSoA.Text);
+                double b = double.Parse(txtSoB.Text);
+                double c = a + b;
+                txtKQ.Text = c.ToString(); 
+            }
         }
 
         private void btTru_Click(object sender, EventArgs e)
