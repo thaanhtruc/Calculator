@@ -34,6 +34,7 @@
             this.txtSoA = new System.Windows.Forms.TextBox();
             this.txtSoB = new System.Windows.Forms.TextBox();
             this.txtKQ = new System.Windows.Forms.TextBox();
+            this.btCong = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lbSoA
@@ -90,11 +91,23 @@
             this.txtKQ.Size = new System.Drawing.Size(237, 38);
             this.txtKQ.TabIndex = 5;
             // 
+            // btCong
+            // 
+            this.btCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btCong.Location = new System.Drawing.Point(61, 308);
+            this.btCong.Name = "btCong";
+            this.btCong.Size = new System.Drawing.Size(79, 32);
+            this.btCong.TabIndex = 6;
+            this.btCong.Text = "Cộng";
+            this.btCong.UseVisualStyleBackColor = true;
+            this.btCong.Click += new System.EventHandler(this.btCong_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btCong);
             this.Controls.Add(this.txtKQ);
             this.Controls.Add(this.txtSoB);
             this.Controls.Add(this.txtSoA);
@@ -116,6 +129,7 @@
         private System.Windows.Forms.TextBox txtSoA;
         private System.Windows.Forms.TextBox txtSoB;
         private System.Windows.Forms.TextBox txtKQ;
+        private System.Windows.Forms.Button btCong;
     }
 }
 
