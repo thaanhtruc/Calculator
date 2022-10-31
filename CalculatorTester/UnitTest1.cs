@@ -40,11 +40,21 @@ namespace CalculatorTester
             Calculation c = new Calculation(2, 0);
             c.Execute("/");
         }
+
+        public TestContext TestContext { get; set; }
+        [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV",
+@".\TestData.csv", "TestData#csv", DataAccessMethod.Sequential)]
         [TestMethod]
-        public void TestDivRound()
+        public void TestWithDataSource()
         {
-            Calculation c = new Calculation(5, 3);
-            Assert.AreEqual(c.Execute("/"), 1);
+            int a = int.Parse(TestContext.DataRow[0].ToString());
+            int b = int.Parse(TestContext.DataRow[1].ToString());
+            int expected = int.Parse(TestContext.DataRow[2].ToString());
+            Calculation c = new Calculation(a, b);
+            int actual = c.Execute("+");
+            Assert.AreEqual(expected, actual);
         }
     }
 }
+
+
